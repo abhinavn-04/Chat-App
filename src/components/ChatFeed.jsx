@@ -2,15 +2,14 @@ import MsgForm from "./MsgForm";
 import MyMsg from "./MyMsg";
 import TheirMsg from "./ThierMsg";
 const ChatFeed = props => {
-	const { chats, activeChat, userName, messages } = props;
+    const { chats, activeChat, userName, messages } = props;
 	const chat = chats && chats[activeChat];
 	const renderMsgs = () => {
 		const keys = Object.keys(messages);
-		console.log(keys);
 		return keys.map((key, index) => {
 			const msg = messages[key];
-			const lastMsgKey = index === 0 ? null : keys[idx - 1];
-			const isMyMsg = username === msg.sender.userName;
+            const lastMsgKey = index === 0 ? null : keys[index - 1];
+			const isMyMsg = userName === msg.sender.username;
 			return (
 				<div key={`msg_${index}`} style={{ width: "100%" }}>
 					<div className="message-block">
@@ -28,10 +27,10 @@ const ChatFeed = props => {
         <div className="chat-title-container">
             <div className="chat-title">{chat?.title}</div>
             <div className="chat-subtitle">
-                {chat.people.map((person)=>`${person.person.username}`)}
+                {chat.people.map((person)=>`${person.person.username} `)}
             </div>
         </div>
-        {renderMsgs()};
+        {renderMsgs()}
         <div style={{ height: '100px' }} />
         <div className="message-form-container">
             <MsgForm {...props} chatId={activeChat} />
