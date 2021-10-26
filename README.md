@@ -40,7 +40,7 @@ cd Chat-App
 npm install
 ```
 
-4. Create `.env` file in root and add your variables
+4. Create `.env` file in root folder and add your variables
 
 ```bash
 projectID="Your_chat_engine_project_id"
