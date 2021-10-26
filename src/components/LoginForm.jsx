@@ -4,6 +4,7 @@ import { useState } from "react"
 const LoginForm = () => {
     const [username,setUsername]=useState('')
     const [password, setPassword] = useState('')
+    const [error,setError]=useState('')
     const submitHandler = async (event) => {
         event.preventDefault();
         const authObj = {
@@ -20,7 +21,7 @@ const LoginForm = () => {
             window.location.reload();
         }
         catch(error) {
-            
+            setError('Username or Password not valid');
         }
     }
     const usernameHandler = (event) => {
@@ -38,6 +39,7 @@ const LoginForm = () => {
                             <span>Start Chatting</span>
                         </button>
                     </div>
+                    <h2 className="error">{error}</h2>
                 </form>
             </div>
         </div>
