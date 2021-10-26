@@ -1,7 +1,7 @@
 const TheirMsg = props => {
 	const { lastMsg, msg } = props;
     const isFirstMsg = !lastMsg || lastMsg.sender.username !== msg.sender.username;
-    console.log(msg.text);
+    const cleanText = msg.text.replace(/<\/?[^>]+(>|$)/g, "");
 	return (
 		<div className="message-row">
 			{isFirstMsg && (
@@ -26,7 +26,7 @@ const TheirMsg = props => {
 						marginLeft: isFirstMsg ? "4px" : "48px",
 					}}
 				>
-					{msg.text}
+					{cleanText}
 				</div>
 			)}
 		</div>
