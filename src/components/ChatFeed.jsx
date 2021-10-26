@@ -66,8 +66,9 @@ const ChatFeed = props => {
 				<div className="chat-title">{chat?.title}</div>
 				<div className="chat-subtitle">
                     {/* {chat.people.map(person => `${person.person.username} `)} */}
-                    {userName}
-                    <div className="chat-subtitle" onClick={logoutHandler}>Log out</div>
+					username: {userName}
+					<br />
+					<button className="chat-subtitle" onClick={logoutHandler} style={{ cursor: 'pointer', backgroundColor:'transparent', border:'none',fontSize:'11px'}}>Log out</button>
 				</div>
 			</div>
 			{renderMsgs()}

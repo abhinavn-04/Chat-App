@@ -7,6 +7,7 @@ const LoginForm = () => {
     const [error,setError]=useState('')
     const submitHandler = async (event) => {
         event.preventDefault();
+        console.log(window.env.projectID, username, password);
         const authObj = {
             "Project-ID":window.env.projectID,
             "User-Name": username,
@@ -30,7 +31,7 @@ const LoginForm = () => {
     return (
         <div className="wrapper">
             <div className="form">
-                <h1 className="title">Chat App</h1>
+                <h1 className="title">Login</h1>
                 <form action="" onSubmit={submitHandler}>
                     <input type="text" value={username} onChange={usernameHandler} className="input" placeholder="Username" required  />
                     <input type="password" value={password} onChange={(event) => { setPassword(event.target.value) }} className="input" placeholder="Password" required />
