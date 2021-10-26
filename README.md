@@ -1,70 +1,73 @@
-# Getting Started with Create React App
+# Chat-App
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+### Create personal chat rooms and add friends.
 
-## Available Scripts
+# Features
+- Create room
+- Send Images
+- Responsive design
 
-In the project directory, you can run:
+# Technologies used 🛠️
+- [React](https://reactjs.org/)
+- [Chat-Engine](https://chatengine.io)
 
-### `npm start`
+# Preview
+<img width="1340" alt="Screenshot 2021-10-26 at 3 04 34 PM" src="https://user-images.githubusercontent.com/60484547/138851888-6a402ad3-1c2f-476e-bb37-beca94eb7a57.png">
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+<img width="1385" alt="Screenshot 2021-10-26 at 3 07 26 PM" src="https://user-images.githubusercontent.com/60484547/138852414-890d04c3-5c8b-4ffb-ac9d-8f16ece42ac2.png">
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+<img width="1434" alt="Screenshot 2021-10-26 at 3 12 05 PM" src="https://user-images.githubusercontent.com/60484547/138853240-084e7a2b-d0bd-4d09-8434-0e3be80d45c6.png">
 
-### `npm test`
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+# 🛠️ Installation Steps
 
-### `npm run build`
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+1. Clone the repository
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+```bash
+git clone https://github.com/
+```
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+2. Change the working directory
 
-### `npm run eject`
+```bash
+cd Chat-App
+```
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+3. Install dependencies
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+```bash
+npm install
+```
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+4. Create `.env` file in root and add your variables
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+```bash
+projectID="Your_chat_engine_project_id"
+```
 
-## Learn More
+5. Run the app
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+```bash
+npm start
+```
+6. Chat-Engine Setup
+   * Go to [Chat-Engine](https://chatengine.io), sign up and create a new project
+     <img width="1357" alt="Screenshot 2021-10-26 at 3 42 32 PM" src="https://user-images.githubusercontent.com/60484547/138859016-672a7542-75b3-420d-8a84-1085c469c765.png">
+     
+   * After creating project you will be redirected to project setings page and there you you can see you project ID
+     <img width="1379" alt="Screenshot 2021-10-26 at 3 43 33 PM" src="https://user-images.githubusercontent.com/60484547/138859307-a8b5ef5a-e15e-4b11-b660-b62c7210572d.png">
+   
+   * Then create some users for your app
+     <img width="1035" alt="Screenshot 2021-10-26 at 3 44 40 PM" src="https://user-images.githubusercontent.com/60484547/138859440-c070805a-7a67-4f7a-850b-ad793874ae04.png">
+   
+   * Finally create a Chat Room and set one of the user admin for that room. This user can delete this room from frontend.
+     <img width="1030" alt="Screenshot 2021-10-26 at 3 45 28 PM" src="https://user-images.githubusercontent.com/60484547/138859565-d3fa565a-f034-4883-8291-5f26294a8073.png">
+   
+   * Now add members in your chat room and you are good to go.
+     <img width="1015" alt="Screenshot 2021-10-26 at 3 55 30 PM" src="https://user-images.githubusercontent.com/60484547/138860168-b28390ba-d978-4502-9bef-f476840a60d8.png">
 
-To learn React, check out the [React documentation](https://reactjs.org/).
 
-### Code Splitting
+You are all set! Open [localhost:3000](http://localhost:3000/) to see the app.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
 
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
