@@ -8,7 +8,7 @@ const LoginForm = () => {
     const submitHandler = async (event) => {
         event.preventDefault();
         const authObj = {
-            "Project-ID": "a506373d-7cf4-4001-a84f-3f7fc87e7086",
+            "Project-ID":window.env.projectID,
             "User-Name": username,
             "User-Secret":password,
         };

@@ -3,7 +3,12 @@ import MyMsg from "./MyMsg";
 import TheirMsg from "./ThierMsg";
 const ChatFeed = props => {
 	const { chats, activeChat, userName, messages } = props;
-	const chat = chats && chats[activeChat];
+    const chat = chats && chats[activeChat];
+    const logoutHandler = () => {
+        localStorage.removeItem('password');
+        localStorage.removeItem('username');
+        window.location.reload();
+    }
 	const renderReadReceipts = (msg, isMyMsg) => {
 		return chat.people.map(
             (person, index) => {
@@ -60,7 +65,9 @@ const ChatFeed = props => {
 			<div className="chat-title-container">
 				<div className="chat-title">{chat?.title}</div>
 				<div className="chat-subtitle">
-					{chat.people.map(person => `${person.person.username} `)}
+                    {/* {chat.people.map(person => `${person.person.username} `)} */}
+                    {userName}
+                    <div className="chat-subtitle" onClick={logoutHandler}>Log out</div>
 				</div>
 			</div>
 			{renderMsgs()}
